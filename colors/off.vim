@@ -1,12 +1,18 @@
 " Name:       off.vim
-" Version:    0.1
-" Maintainer: github.com/pbrisbin
+" Version:    0.77
+" Maintainer: Oliver Jan Krylow <oliver@bugabinga.net>
 " License:    The MIT License (MIT)
 "
-" A colorscheme meant to look like a more pleasant version of syntax off.
-" Structure and what little color there is is taken from pencil.vim
+"TODO rename this scheme. candidates: sense, little, nugu
+"
+" A colorscheme that puts visual emphasis on high priority sytanx elements when
+" reading code.
+"
+" Structure and what little color there is is taken from pencil.vim and
+" vim-colors-off.
 "
 " https://github.com/reedes/vim-colors-pencil
+" https://github.com/pbrisbin/vim-colors-off
 "
 """
 hi clear
@@ -68,6 +74,8 @@ else
 endif
 
 " https://github.com/noahfrederick/vim-hemisu/
+" this helper function makes it easier to always specify a complete set of
+" styles, without repeating the boring and common stuff.
 function! s:h(group, style)
   execute "highlight" a:group
     \ "guifg="   (has_key(a:style, "fg")    ? a:style.fg.gui   : "NONE")
@@ -81,21 +89,19 @@ endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
-call s:h("Comment",       {"fg": s:bg_subtle, "gui": "italic"})
+call s:h("Comment",       {"fg": s:white, "gui": "italic", "cterm": "italic,underline"})
+call s:h("SpecialComment", {"fg": s:subtle_black})
 
-"call s:h("Constant",      {"fg": s:cyan})
-hi! link Constant         Normal
+call s:h("Constant",      {"fg": s:green})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-"call s:h("Identifier",    {"fg": s:dark_blue})
-hi! link Identifier       Normal
+call s:h("Identifier",    {"fg": s:norm, "gui": "bold", "cterm": "bold"})
 hi! link Function         Identifier
 
-"call s:h("Statement",     {"fg": s:green})
 hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
@@ -104,25 +110,21 @@ hi! link Operator         Statement
 hi! link Keyword          Statement
 hi! link Exception        Statement
 
-"call s:h("PreProc",       {"fg": s:red})
 hi! link PreProc          Normal
 hi! link Include          PreProc
 hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-"call s:h("Type",          {"fg": s:purple})
 hi! link Type             Normal
 hi! link StorageClass     Type
 hi! link Structure        Type
 hi! link Typedef          Type
 
-"call s:h("Special",       {"fg": s:pink})
 hi! link Special          Normal
 hi! link SpecialChar      Special
 hi! link Tag              Special
 hi! link Delimiter        Special
-hi! link SpecialComment   Special
 hi! link Debug            Special
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
