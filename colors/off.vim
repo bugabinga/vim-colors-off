@@ -202,3 +202,13 @@ hi link GitGutterAdd                LineNr
 hi link GitGutterDelete             LineNr
 hi link GitGutterChange             LineNr
 hi link GitGutterChangeDelete       LineNr
+"
+" highlight help files so they are easier to read
+call s:h("helpHeader",        {"fg": s:blue, "bg": s:bg, "gui": "bold", "cterm": "bold"})
+hi! link helpTag helpHeader
+hi! link helpVim helpHeader
+hi! link helpStar helpHeader
+hi! link helpHyperTextEntry helpHeader
+hi! link helpHyperTextJump helpHeader
+hi! link helpSpecial helpHeader
+hi! link helpBar helpHeader
