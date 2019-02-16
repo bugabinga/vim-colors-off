@@ -133,12 +133,21 @@ but mostly in order trim down this enourmous color space to a handful of useful
 states.
 Imagine a theme would assign every possible color to something.
 
+<style
+  type="text/css">
+#local {color:#889934;}
+#function {color:#735010;}
+#for {color:#234253;}
+#select {color:#318776;}
+#do {color:#630081;}
+#end {color:#129945;}
+</style>
 <pre>
-<font color="#889934">local</font> <font color="#735010">function</font> append_all(buffer, ...)
-  <font color="#234253">for</font> i=1,<font color="#318776">select</font>("#", ...) <font color="#630081">do</font>
-    table.insert(buffer, (<font color=#318776>select</font>(i, ...)))
-  <font color="#129945">end</font>
-<font color="#129945">end</font>
+<span id="local">local</span> <span id="function">function</span> append_all(buffer, ...)
+  <span id="for">for</span> i=1,<span id="select">select</span>("#", ...) <span id="do">do</span>
+    table.insert(buffer, (<span id="select">select</span>(i, ...)))
+  <span id="end">end</span>
+<span id="end">end</span>
 </pre>
 
 These colors are almost meaningless.
