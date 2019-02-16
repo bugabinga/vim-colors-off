@@ -1,7 +1,5 @@
 # nugu
 
-<!-- TODO: rename theme everywhere -->
-
 This theme is based on the [vim-colors-off][] colorscheme.
 
 [vim-colors-off]: https://github.com/pbrisbin/vim-colors-off

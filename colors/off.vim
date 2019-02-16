@@ -1,9 +1,7 @@
-" Name:       off.vim
+" Name:       nugu.vim
 " Version:    0.77
 " Maintainer: Oliver Jan Krylow <oliver@bugabinga.net>
 " License:    The MIT License (MIT)
-"
-"TODO rename this scheme. candidates: sense, little, nugu
 "
 " A colorscheme that puts visual emphasis on high priority sytanx elements when
 " reading code.
@@ -21,7 +19,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='off'
+let g:colors_name='nugu'
 
 let s:black           = { "gui": "#212121", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
