@@ -90,28 +90,28 @@ call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
 call s:h("Comment",       {"fg": s:white, "gui": "italic", "cterm": "italic,underline"})
 call s:h("SpecialComment", {"fg": s:subtle_black})
 
-call s:h("Constant",      {"fg": s:green})
+call s:h("Constant",      {"fg": s:cyan})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
 hi! link Float            Constant
 hi! link String           Constant
 
-call s:h("Identifier",    {"fg": s:norm, "gui": "bold", "cterm": "bold"})
-hi! link Function         Identifier
+call s:h("Function",      {"fg": s:norm, "gui": "bold", "cterm": "bold"})
+hi! link Identifier       Normal
+hi! link Macro            Function
+call s:h("Keyword",       {"fg": s:norm_subtle})
 
 hi! link Statement        Normal
 hi! link Conditonal       Statement
 hi! link Repeat           Statement
 hi! link Label            Statement
 hi! link Operator         Statement
-hi! link Keyword          Statement
 hi! link Exception        Statement
 
 hi! link PreProc          Normal
 hi! link Include          PreProc
 hi! link Define           PreProc
-hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
 hi! link Type             Normal
