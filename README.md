@@ -119,13 +119,7 @@ However, since either vim does not support those, or I have no opinion on them
 > If you are curious to experiment with these kinds of highlightig styles check
 > out editors like [Textadept] or [Howl] which support them.
 
-One of these styles, **bold**, *italic*,
-<font color="red">c</font>
-<font color="blue">o</font>
-<font color="pink">l</font>
-<font color="green">o</font>
-<font color="orange">r</font>,
-is not like the others.
+One of these styles, **bold**, *italic*, color is not like the others.
 Technically, color is a group of dimensions.
 Every single color is its own style.
 The reason why themes limit themselves to a color pallete is partly astethics,
@@ -133,29 +127,14 @@ but mostly in order trim down this enourmous color space to a handful of useful
 states.
 Imagine a theme would assign every possible color to something.
 
-<style
-  type="text/css">
-#local {color:#889934;}
-#function {color:#735010;}
-#for {color:#234253;}
-#select {color:#318776;}
-#do {color:#630081;}
-#end {color:#129945;}
-</style>
-<pre>
-<span id="local">local</span> <span id="function">function</span> append_all(buffer, ...)
-  <span id="for">for</span> i=1,<span id="select">select</span>("#", ...) <span id="do">do</span>
-    table.insert(buffer, (<span id="select">select</span>(i, ...)))
-  <span id="end">end</span>
-<span id="end">end</span>
-</pre>
+![lua\_color\_party\_snip.png]
 
 These colors are almost meaningless.
 Any style must be used judiciously in order to quickly communicate *something*.
 Furthermore, the amount of styles used in total, should be low enough so that
 humans can remember what they mean.
 
-The way I order the importance of syntax elements is to following, from most to
+The way I order the importance of syntax elements is the following, from most to
 least important:
 
 1. Comments (inline)
