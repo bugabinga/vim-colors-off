@@ -127,7 +127,7 @@ but mostly in order trim down this enourmous color space to a handful of useful
 states.
 Imagine a theme would assign every possible color to something.
 
-![lua\_color\_party\_snip.png]
+![lua code highlighted every keyword with distinct color](lua\_color\_party\_snip.png)
 
 These colors are almost meaningless.
 Any style must be used judiciously in order to quickly communicate *something*.
